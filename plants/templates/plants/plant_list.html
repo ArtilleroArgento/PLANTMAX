@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANTMAX - Lista de Plantas</title>
+</head>
+<body>
+    <h1>PLANTMAX - Lista de Plantas</h1>
+    <form action="{% url 'plant_search' %}" method="GET">
+        <input type="text" name="q" placeholder="Buscar plantas">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul>
+        {% for plant in plants %}
+            <li>{{ plant.name }} - {{ plant.origin }} - {{ plant.care }}</li>
+        {% empty %}
+            <li>No se encontraron plantas</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

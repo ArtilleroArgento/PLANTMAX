@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANTMAX - Registro de Plantas</title>
+</head>
+<body>
+    <h1>PLANTMAX - Registro de Plantas</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Nombre de la planta:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="origin">Lugar de origen:</label><br>
+        <input type="text" id="origin" name="origin"><br><br>
+
+        <label for="care">Cuidados necesarios:</label><br>
+        <textarea id="care" name="care" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
