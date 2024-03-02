@@ -1,10 +1,10 @@
-from django.shortcuts import render
+ffrom django.shortcuts import render
 from .models import Plant
 
 
-def plant_list(request):
+def index(request):
     plants = Plant.objects.all()
-    return render(request, 'plants/plant_list.html', {'plants': plants})
+    return render(request, 'plants/index.html', {'plants': plants})
 
 def plant_search(request):
     query = request.GET.get('q')
