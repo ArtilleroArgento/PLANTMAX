@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Plant
+from plants.models import Plant
 
 admin.site.register(Plant)
