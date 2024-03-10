@@ -6,6 +6,7 @@
     <body id="page-top">
         <!-- Navigation-->
    <form method="post">
+        {% csrf_token %}
         <label for="name">Nombre de la planta:</label><br>
         <input type="text" id="name" name="name"><br><br>
         
